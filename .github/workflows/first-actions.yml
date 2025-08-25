@@ -5,6 +5,9 @@ jobs:
     runs-on: 	ubuntu-latest
     steps:
       - name: Print greeting
-        run: echo "Hellow World!"
+        run: |
+          echo "Hellow World!"
+          mkdir pastaTeste
+          ls -la
       - name: Print goodbye
         run: echo "Done - bye"
