@@ -1,5 +1,8 @@
-name: frist-actions
-on: workflow_dispatch
+name: first-actions
+on:
+  push:
+    branches:
+      - main
 jobs: 
   first-job:
     runs-on: 	ubuntu-latest
