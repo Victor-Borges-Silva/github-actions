@@ -16,10 +16,26 @@ jobs:
       - name: Install dependencies
         run: |
           npm install  
-      - name: Print greeting
+  deploy:
+    needs: first-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.4.0
+        with:
+          node-version: '20'
+      - name: Install dependencies
         run: |
-          echo "Hellow World!"
-          mkdir pastaTeste
-          ls -la
+          npm install 
+      - name: Build project
+        run: |
+          npm run build
+          echo "Build completed"
+  End:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:        
       - name: Print goodbye
         run: echo "Done - bye"
