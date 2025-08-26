@@ -29,10 +29,6 @@ jobs:
       - name: Install dependencies
         run: |
           npm install 
-      - name: Build project
-        run: |
-          npm run build
-          echo "Build completed"
   End:
     needs: deploy
     runs-on: ubuntu-latest
