@@ -4,7 +4,10 @@
   "description": "Repositório destinado ao laboratório de github Actions",
   "main": "._vite.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",
@@ -17,9 +20,4 @@
     "url": "https://github.com/Victor-Borges-Silva/github-actions/issues"
   },
   "homepage": "https://github.com/Victor-Borges-Silva/github-actions#readme",
-  "name": "github-actions",
-  "version": "1.0.0",
-  "scripts": {
-    "test": "jest"
-  }
 }
