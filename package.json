@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Victor-Borges-Silva/github-actions/issues"
   },
-  "homepage": "https://github.com/Victor-Borges-Silva/github-actions#readme"
+  "homepage": "https://github.com/Victor-Borges-Silva/github-actions#readme",
+  "name": "github-actions",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest"
+  }
 }
