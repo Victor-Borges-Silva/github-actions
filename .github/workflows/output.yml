@@ -1,0 +1,18 @@
+name: Issue Events Logger
+
+on:
+  issues:
+    types: [opened, edited, closed, reopened, deleted]
+
+jobs:
+  log-issue-event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exibir detalhes do evento
+        run: |
+          echo "🔔 Novo evento de Issue detectado!"
+          echo "Ação: ${{ github.event.action }}"
+          echo "Número da Issue: #${{ github.event.issue.number }}"
+          echo "Título: ${{ github.event.issue.title }}"
+          echo "Autor: ${{ github.event.issue.user.login }}"
+          echo "URL: ${{ github.event.issue.html_url }}"
